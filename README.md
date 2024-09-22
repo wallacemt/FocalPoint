@@ -27,7 +27,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 
    ```bash
    git clone https://github.com/wallacemt/FocalPoint.git
-   cd task-manager
+   cd FocalPoint
 2. **Instale as dependências**
     ```bash
     npm install
