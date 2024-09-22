@@ -38,21 +38,28 @@ Siga os passos abaixo para rodar o projeto localmente:
 
     *Acesse http://localhost:3000 para visualizar o aplicativo.*
 
-## 📸 Screenshots
+# 📸 Screenshots
 
 Aqui estão algumas capturas de tela do projeto em ação:
 
-### Tela Principal
-![Tela Principal Desktop](https://drive.google.com/uc?export=view&id=108PjdxqXrbhvJIQ10Q1Ee3znPPI3PbeI)
-![Tela Principal Celular](https://drive.google.com/uc?export=view&id=1-vzxRuF37smi9AkEyHmXHZbu4BK1S-xJ)
+##  Tela Principal 
+<div align="center">
+  <img src="https://drive.google.com/uc?export=view&id=108PjdxqXrbhvJIQ10Q1Ee3znPPI3PbeI" alt="Tela Principal Desktop" width="800"/>
+  <img src="https://drive.google.com/uc?export=view&id=1-vzxRuF37smi9AkEyHmXHZbu4BK1S-xJ" alt="Tela Principal Celular" width="300"/>
+</div>
 
-### Adicionar Nova Tarefa
-![Adicionar Nova Tarefa Desktop](https://drive.google.com/uc?export=view&id=109tkin0SsOJb2V2MJQflr9EYDRA8xJfj)
-![Adicionar Nova Tarefa Celular](https://drive.google.com/uc?export=view&id=1020OEL4aV8shTJ_lUPoUZVqNdPnopMk0)
+##  Adicionar Nova Tarefa
+<div align="center">
+  <img src="https://drive.google.com/uc?export=view&id=109tkin0SsOJb2V2MJQflr9EYDRA8xJfj" alt="Adicionar Nova Tarefa Desktop" width="800"/>
+  <img src="https://drive.google.com/uc?export=view&id=1020OEL4aV8shTJ_lUPoUZVqNdPnopMk0" alt="Adicionar Nova Tarefa Celular" width="300"/>
+</div>
 
-### Modal de Confirmação de Exclusão
-![Modal de Confirmação de Exclusão Desktop](https://drive.google.com/uc?export=view&id=10AEyEkxQfAek20gpOT9_yrMIa9Z6RcGS)
-![Modal de Confirmação de Exclusão Celular](https://drive.google.com/uc?export=view&id=103UHvbOllldUgd_H9MN5jSmeHqpgYj5H)
+##  Modal de Confirmação de Exclusão
+<div align="center">
+  <img src="https://drive.google.com/uc?export=view&id=10AEyEkxQfAek20gpOT9_yrMIa9Z6RcGS" alt="Modal de Confirmação de Exclusão Desktop" width="800"/>
+  <img src="https://drive.google.com/uc?export=view&id=103UHvbOllldUgd_H9MN5jSmeHqpgYj5H" alt="Modal de Confirmação de Exclusão Celular" width="300"/>
+</div>
+
 
 
 # 👩‍💻 Contribuição
