@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(1px);
     display: flex;
     justify-content: center;
@@ -31,41 +31,15 @@
         letter-spacing: -0.48px;
         margin-bottom: 32px;
     }
-    label {
-        height: 19px;
-        align-self: stretch;
-        color: #000;
-        font-family: "Inter Tight";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: -0.32px;
-    }
-
-    input {
-        display: flex;
-        width: 100%;
-        box-sizing: border-box;
-        border-radius: 8px;
-        border: 1px solid #d7dde9;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        align-self: stretch;
-        margin-bottom: 32px;
-        margin-top: 10px;
-    }
-    input::placeholder {
-        color: rgba(0, 0, 0, 0.56);
+    p {
+        color: rgba(0, 0, 0, 0.54);
         font-family: "Inter Tight";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        line-height: 150%;
         letter-spacing: -0.32px;
-        flex: 1 0 0;
+        margin-bottom: 32px;
     }
 }
 
@@ -75,8 +49,7 @@
     gap: 10px;
 }
 
-.cancelButton,
-.addButton {
+.cancelButton {
     display: flex;
     padding: 16px 24px;
     justify-content: center;
@@ -98,15 +71,16 @@
     background: #e7eefb;
 }
 
-.addButton {
+.deleteButton {
     display: flex;
+    border: none;
     padding: 16px 24px;
     justify-content: center;
     align-items: center;
     gap: 8px;
     flex: 1 0 0;
     border-radius: 8px;
-    background: linear-gradient(90deg, #0796d3 0%, #53c0f0 68.65%);
+    background: linear-gradient(90deg, #d30707 0%, #f05353 68.65%);
     color: #fff;
     font-family: "Inter Tight";
     font-size: 16px;

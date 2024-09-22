@@ -1,48 +1,57 @@
-// src/components/TaskList.js
 'use client';
 import { useEffect, useState } from 'react';
 import styles from './taskList.module.scss';
-import AddTaskButton from '../addTaskButton'
+import AddTaskButton from '../addTaskButton';
+import DeleteTaskModal from '../deleteTaskModal';
 
 export default function TaskList() {
   const [tasks, setTasks] = useState([]);
+  const [taskToDelete, setTaskToDelete] = useState(null);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
   // Recuperar tarefas do localStorage
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    
-    if (storedTasks.length === 0) {
-      // Adiciona 3 tarefas de exemplo
-      const initialTasks = [
-        { text: 'Lavar as mãos', completed: false },
-        { text: 'Fazer um bolo', completed: true }, 
-        { text: 'Lavar a louça', completed: false }
-      ];
-      setTasks(initialTasks);
-      localStorage.setItem('tasks', JSON.stringify(initialTasks));
-    } else {
-      setTasks(storedTasks);
-    }
+    setTasks(storedTasks);
   }, []);
-
+  
   useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    if (tasks.length > 0) {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
   }, [tasks]);
 
-  const handleDeleteTask = (taskToDelete) => {
-    setTasks(tasks.filter(task => task.text !== taskToDelete.text));
+  const handleDeleteTask = (taskText) => {
+    setTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter(task => task.text !== taskText);
+      localStorage.setItem('tasks', JSON.stringify(updatedTasks)); 
+      return updatedTasks;
+    });
+  };
+
+  const openDeleteModal = (task) => {
+    setTaskToDelete(task);
+    setIsDeleteModalOpen(true);
+  };
+
+  const closeDeleteModal = () => {
+    setTaskToDelete(null);
+    setIsDeleteModalOpen(false);
   };
 
   const toggleTaskCompletion = (taskToToggle) => {
-    setTasks(tasks.map(task => 
+    const updatedTasks = tasks.map(task => 
       task.text === taskToToggle.text ? { ...task, completed: !task.completed } : task
-    ));
+    );
+    setTasks(updatedTasks);
   };
 
   const handleAddTask = (newTask) => {
-    const updatedTasks = [...tasks, { text: newTask, completed: false }];
-    setTasks(updatedTasks);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    if (newTask.trim()) {
+      const updatedTasks = [...tasks, { text: newTask, completed: false }];
+      setTasks(updatedTasks);
+      localStorage.setItem('tasks', JSON.stringify(updatedTasks)); 
+    }
   };
 
   return (
@@ -61,7 +70,7 @@ export default function TaskList() {
                     />
                   <span>{task.text}</span>
               </div>
-              <button onClick={() => handleDeleteTask(task)} className='trash'>
+              <button onClick={() => openDeleteModal(task)} className='trash'>
                 <img src={'/trash.svg'} className={styles.icon} />
               </button>
             </li>
@@ -80,7 +89,7 @@ export default function TaskList() {
                     />
                   <span>{task.text}</span>
               </div>
-              <button onClick={() => handleDeleteTask(task)}>
+              <button onClick={() => openDeleteModal(task)}>
                 <img src='/trash.svg' className={styles.icon} />
               </button>
             </li>
@@ -88,6 +97,13 @@ export default function TaskList() {
         </ul>
       </div>
       <AddTaskButton onAddTask={handleAddTask} />
+      {isDeleteModalOpen && (
+        <DeleteTaskModal 
+          onClose={closeDeleteModal} 
+          onDeleteTask={handleDeleteTask} 
+          taskText={taskToDelete?.text} 
+        />
+      )}
     </div>
   );
 }

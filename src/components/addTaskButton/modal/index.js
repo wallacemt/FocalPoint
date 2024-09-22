@@ -9,7 +9,7 @@ export default function Modal({ onClose, onAddTask }) {
     if (newTask.trim()) {
       onAddTask(newTask);
       setNewTask('');
-      onClose(); // Fecha o modal após adicionar a tarefa
+      onClose();
     }
   };
 
@@ -20,10 +20,9 @@ export default function Modal({ onClose, onAddTask }) {
         <label htmlFor="taskTitle">Título</label>
         <input
           type="text"
-          id="taskTitle"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
-          placeholder="Digite o nome da tarefa"
+          placeholder="Digite"
         />
         <div className={styles.modalButtons}>
           <button onClick={onClose} className={styles.cancelButton}>
