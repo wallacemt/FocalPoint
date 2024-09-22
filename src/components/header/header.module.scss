@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+.header {
+    width: 90%;
+    display: flex;
+    padding-bottom: 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+    border-bottom: 1px solid #d7dde9;
+    margin-top: 24px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo {
+    display: flex;
+    width: 150px;
+    padding: 1.5px 0.252px 1.5px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10.438px;
+}
+.logomark {
+    width: 33.166px;
+    height: 33px;
+}
+
+.logotype {
+    width: 106.144px;
+    height: 15.498px;
+    fill: #101828;
+}
+
+.greeting {
+    color: #000;
+    font-family: "Inter Tight";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.48px;
+    position: relative;
+}
+
+.date {
+    color: rgba(0, 0, 0, 0.54);
+    font-family: "Inter Tight";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
+
+@media (max-width: 600px) {
+    .header {
+        display: flex;
+        width: 272px;
+        padding-bottom: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    .greeting {
+        color: #000;
+        font-family: "Inter Tight";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.32px;
+    }
+    .date {
+        color: rgba(0, 0, 0, 0.54);
+        font-family: "Inter Tight";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.32px;
+    }
+    .logo {
+        display: flex;
+        height: 36px;
+        padding: 1.5px 0.252px 1.5px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 10.438px;
+    }
+}

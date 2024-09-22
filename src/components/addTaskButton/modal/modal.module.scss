@@ -1,0 +1,74 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Desfoca o fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    h2 {
+        margin-bottom: 16px;
+        font-size: 24px;
+        color: #333;
+    }
+    label {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+    }
+}
+
+
+
+.modalButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cancelButton,
+.addButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cancelButton {
+    background-color: #f44336;
+    color: white;
+
+    &:hover {
+        background-color: #e53935;
+    }
+}
+
+.addButton {
+    background-color: #4caf50;
+    color: white;
+
+    &:hover {
+        background-color: #45a049;
+    }
+}
